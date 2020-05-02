@@ -4,16 +4,16 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $trustedPublisherCertificate = "$toolsDir\openvpn_trusted_publisher.cer"
 $trustedPublisherCertificateHash = '8f53adb36f1c61c50e11b8bdbef8d0ffb9b26665a69d81246551a0b455e72ec0b26a34dc9b65cb3750baf5d8a6d19896c3b4a31b578b15ab7086377955509fad'
 
-$pgpPublicKey = "$toolsDir\MullvadVPN-2019.5.exe.asc"
-$pgpPublicKeyHash = '8c073c0371f93315de3fea40437e928543a0e71edb4796fde8017968256680a6'
+$pgpPublicKey = "$toolsDir\MullvadVPN-2020.3.exe.asc"
+$pgpPublicKeyHash = '7605462f5aa1b81cfcebdfe2b327d4da13698a11af773c05d46c17f72d7cb29e'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'exe'
-  url64bit      = 'https://mullvad.net/media/app/MullvadVPN-2019.5.exe'
+  url64bit      = 'https://mullvad.net/media/app/MullvadVPN-2020.3.exe'
 
-  checksum64    = '5ada9945d59b0d2e29242270403491e7657704a07a67eb45419ce9dc7a2a56cc'
+  checksum64    = '7dc66b4b4d3cafc430c91edb01e5efb43dccca69e09dc7d8d2a3bc6718455b52'
   checksumType64= 'sha256'
 
   silentArgs    = '/S'
